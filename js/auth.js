@@ -33,7 +33,7 @@ async function login() {
 
     localStorage.setItem("jwt", token.replace(/^"|"$/g, ""));
 
-    window.location.href = "profile.html";
+    window.location.href = "pages/profile.html";
   } catch (error) {
     errorElement.textContent = error.message;
   }
@@ -42,5 +42,5 @@ async function login() {
 function logout() {
   localStorage.removeItem("jwt");
   sessionStorage.clear();
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
