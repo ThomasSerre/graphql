@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mon Profil Zone01</title>
+
+    <link rel="stylesheet" href="../assets/variables.css" />
+    <link rel="stylesheet" href="../assets/profile.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <h2>Zone01</h2>
+
+      <nav>
+        <a href="#profile"> Profil </a>
+
+        <a href="#stats"> Statistiques </a>
+
+        <a href="#piscine"> Piscines </a>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <h1>Dashboard GraphQL</h1>
+
+        <button id="logoutBtn">Déconnexion</button>
+      </header>
+
+      <section id="profile" class="card profile-card">
+        <div class="avatar" id="avatar">?</div>
+
+        <div>
+          <h2 id="userLogin">Chargement...</h2>
+
+          <p id="userId"></p>
+        </div>
+      </section>
+
+      <section id="xp" class="dashboard">
+        <div class="card">
+          <h3>XP Total</h3>
+
+          <h1 id="xpTotal">0</h1>
+        </div>
+
+        <div class="card">
+          <h3>Projets validés</h3>
+
+          <h1 id="validatedProjects">0</h1>
+        </div>
+
+        <div class="card">
+          <h3>Audit Ratio</h3>
+
+          <h1 id="auditRatio">0</h1>
+        </div>
+      </section>
+
+      <section id="stats" class="graphs">
+        <div class="card graph-full">
+          <h3>XP dans le temps</h3>
+
+          <svg id="xpGraph"></svg>
+        </div>
+
+        <div class="card graph-full">
+          <h3>XP par projet</h3>
+
+          <svg id="projectGraph"></svg>
+        </div>
+      </section>
+
+      <section id="piscine" class="graphs">
+        <div class="card">
+          <h3>Piscine GO</h3>
+
+          <svg id="goGraph"></svg>
+        </div>
+
+        <div class="card">
+          <h3>Piscine JS</h3>
+
+          <svg id="jsGraph"></svg>
+        </div>
+
+        <div class="card">
+          <h3>Tentatives GO</h3>
+
+          <div class="table-container">
+            <table id="goAttemptTable">
+              <thead>
+                <tr>
+                  <th>Exercice</th>
+                  <th>Tentatives</th>
+                </tr>
+              </thead>
+
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Tentatives JS</h3>
+
+          <div class="table-container">
+            <table id="jsAttemptTable">
+              <thead>
+                <tr>
+                  <th>Exercice</th>
+                  <th>Tentatives</th>
+                </tr>
+              </thead>
+
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/jwt.js"></script>
+    <script src="../js/graphql.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

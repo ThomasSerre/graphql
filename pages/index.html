@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion Zone01</title>
+
+    <link rel="stylesheet" href="../assets/login.css" />
+  </head>
+  <body>
+
+    <div class="background-circle circle1"></div>
+    <div class="background-circle circle2"></div>
+
+    <div class="login-container">
+
+    <div class="login-card">
+
+        <div class="logo">🔐</div>
+
+        <h1>Zone01 Profile</h1>
+
+        <p class="subtitle">
+            Connectez-vous avec votre adresse e-mail
+        </p>
+
+        <input
+            type="text"
+            id="login"
+            placeholder="Email"
+        />
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Mot de passe"
+        />
+
+        <button onclick="login()">
+            Connexion
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+  </body>
+</html>
